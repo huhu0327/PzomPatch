@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="PzomPatch/App.axaml" value="PzomPatch/PzomPatch.csproj" />
+        <entry key="PzomPatch/Views/MainView.axaml" value="PzomPatch/PzomPatch.csproj" />
+        <entry key="PzomPatch/Views/MainWindow.axaml" value="PzomPatch/PzomPatch.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

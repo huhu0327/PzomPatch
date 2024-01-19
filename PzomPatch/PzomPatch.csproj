@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <LangVersion>12</LangVersion>
+        <!--        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>-->
+
+        <!--        <PublishSingleFile>true</PublishSingleFile>-->
+        <!--        <DebugType>embedded</DebugType>-->
+        <!--        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>-->
+        <!--        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>-->
+        <!--        <RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Models\"/>
+        <AvaloniaResource Include="Assets\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="0.10.18"/>
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.18"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18"/>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+        <PackageReference Include="Salaros.ConfigParser" Version="0.3.8"/>
+        <PackageReference Include="Serilog.Formatting.Compact" Version="2.0.0"/>
+        <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1"/>
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0"/>
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1"/>
+    </ItemGroup>
+</Project>
