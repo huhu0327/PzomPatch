@@ -1,0 +1,95 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PzomPatch.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="PzomPatch.Views.MainView"
+        x:DataType="vm:MainViewModel"
+        MinWidth="500" Width="500" MinHeight="550" Height="550"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="PzomPatch">
+
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="스팀(steam.exe) 경로" HorizontalAlignment="Center" />
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBox Text="{Binding SteamPath}" Height="10" Width="400" IsReadOnly="True" />
+                <Button Margin="5 0 0 0" Command="{Binding SetPathAsync}" CommandParameter="0">
+                    <TextBlock Text="1.지정" />
+                </Button>
+            </WrapPanel>
+
+            <TextBlock Text="좀보이드(ProjectZomboid64.exe) 경로" HorizontalAlignment="Center" Margin="0 10 0 0" />
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBox Text="{Binding ZomboidPath}" Height="10" Width="400" IsReadOnly="True" />
+                <Button Margin="5 0 0 0" Command="{Binding SetPathAsync}" CommandParameter="1">
+                    <TextBlock Text="2.지정" />
+                </Button>
+            </WrapPanel>
+
+            <TextBlock Text="경로 지정 이후 램" HorizontalAlignment="Center" Margin="0 10 0 0" />
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Margin="5 0 0 0" Command="{Binding LoadFilesCommand}" CommandParameter="1">
+                    <TextBlock Text="3.불러오기" />
+                </Button>
+            </WrapPanel>
+
+            <Grid Margin="0 10 0 0">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="램" HorizontalAlignment="Center" />
+                    <WrapPanel HorizontalAlignment="Center">
+                        <TextBox Text="{Binding Memory}" Width="20" MaxLength="2" />
+                        <TextBlock Text="GB" VerticalAlignment="Center" />
+                    </WrapPanel>
+                </StackPanel>
+
+                <Button Command="{Binding SetMemoryCommand}" Width="90" Height="50" HorizontalAlignment="Center"
+                        Margin="250 0 0 0">
+                    <TextBlock Text="4.할당" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="닉네임 3 ~ 20 ( 한글 ; , ' ? / @ $ 안됨 )" HorizontalAlignment="Center" />
+                        <TextBox Text="{Binding NickName}" Width="200" MaxLength="20" />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="서버 주소" HorizontalAlignment="Center" />
+                        <TextBox Text="{Binding ServerIp}" Width="200" MaxLength="20" />
+                    </StackPanel>
+                </StackPanel>
+
+                <Button Command="{Binding SetNickNameCommand}" Width="90" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Margin="350 0 0 0">
+                    <TextBlock Text="5.적용" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+        </StackPanel>
+
+
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 20">
+            <Button Command="{Binding PlayCommand}" Background="GreenYellow" Width="120" Height="50"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 20 0">
+                <TextBlock Text="6.게임 실행" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button Command="{Binding KillCommand}" Width="120" Height="50"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 20 0">
+                <TextBlock Text="7.게임 종료" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+
+            <Button Command="{Binding ApplyPatchCommand}" Width="120" Height="50" HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                <TextBlock Text="8.모드 패치" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+        </WrapPanel>
+    </Grid>
+
+</Window>
