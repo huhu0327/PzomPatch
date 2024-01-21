@@ -51,9 +51,9 @@ public class ZomboidService : IZomboidService
         var path = _zomboidUserPath + @"\Lua\ServerListSteam.txt";
 
         var text = """
-                   name=국밥서버
+                   name=프좀패치
                    port=16261
-                   description=연말 크리스마스 기념 좀보이드 국밥서버
+                   description=프좀패치서버
                    password=password12@
                    usesteamrelay=true
                    """;

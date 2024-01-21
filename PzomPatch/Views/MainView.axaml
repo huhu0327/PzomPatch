@@ -67,9 +67,10 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Button Command="{Binding SetNickNameCommand}" Width="90" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"
+                <Button Command="{Binding SetNickNameCommand}" Width="90" Height="50" HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Margin="350 0 0 0">
-                    <TextBlock Text="5.적용" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <TextBlock Text="5.추가" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Button>
             </Grid>
         </StackPanel>
