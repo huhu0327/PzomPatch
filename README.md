@@ -42,8 +42,8 @@
   - Salaros.ConfigParser
 
 ## 개선 사항
-코드 리팩토링  
-테스트코드 작성  
-Github Action -> CI / CD 환경 구축  
-GUI 개선  
-사용법 doc으로 분리
+- [ ] 코드 리팩토링  
+- [ ] 테스트코드 작성  
+- [ ] Github Action -> CI / CD 환경 구축  
+- [ ] GUI 개선  
+- [ ] 사용법 doc으로 분리
