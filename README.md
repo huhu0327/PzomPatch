@@ -6,9 +6,16 @@
 # PzomPatch
 이 프로그램은 프로젝트 좀보이드 간편 패치 윈도우 데스크톱 어플리케이션입니다.
 
-## [다운로드](https://github.com/huhu0327/PzomPatch/releases)
+[다운로드](https://github.com/huhu0327/PzomPatch/releases/latest/download/PzomPatch.exe)
 </div>
 
+## 사용법
+1. 스팀/좀보이드 경로 지정
+2. 램 불러오기
+3. 원하는 램 크기 할당
+4. 닉네임/서버주소 입력 후 적용
+5. 게임 실행
+6. (No Mo Culling, BetterFPS 모드가 있다면) 서버 모드 다운로드 이후 모드 패치
 
 ## 기능
 - 클라이언트 메모리 사이즈 조정 ( ProjectZomboid64.bat , ProjectZomboid64.json )
@@ -38,4 +45,5 @@
 코드 리팩토링  
 테스트코드 작성  
 Github Action -> CI / CD 환경 구축  
-GUI 개선
+GUI 개선  
+사용법 doc으로 분리
